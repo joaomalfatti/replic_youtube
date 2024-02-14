@@ -8,6 +8,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+
+  int _indiceAtual = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +44,12 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Container(),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
+        currentIndex: _indiceAtual,
+        onTap: (indice){
+          setState(() {
+            _indiceAtual = indice;
+          });
+        },
         type: BottomNavigationBarType.fixed,
         fixedColor: Colors.red,
         items: const [
@@ -54,7 +62,7 @@ class _HomePageState extends State<HomePage> {
             label: "Shorts",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.whatshot),
+            icon: Icon(Icons.subscriptions),
             label: "Inscrições",
           ),
           BottomNavigationBarItem(
