@@ -39,8 +39,30 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.account_circle,))
         ],
       ),
-      body: Container(
+      body: Container(),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        type: BottomNavigationBarType.fixed,
+        fixedColor: Colors.red,
+        items: const [
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: "Início",
+            ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.whatshot),
+            label: "Shorts",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.whatshot),
+            label: "Inscrições",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.whatshot),
+            label: "Você",
+          ),
 
+        ],
       ),
     );
   }
