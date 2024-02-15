@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:replic_youtube/telas/InicioPage.dart';
+import 'package:replic_youtube/telas/InscricaoPage.dart';
+import 'package:replic_youtube/telas/ShortsPage.dart';
+import 'package:replic_youtube/telas/VocePage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,10 +19,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
 
     List<Widget> telas = [
-      Text("Início"),
-      Text("Shorts"),
-      Text("Inscrições"),
-      Text("Você"),
+      InicioPage(),
+      ShortsPage(),
+      InscricaoPage(),
+      VocePage(),
     ];
 
     return Scaffold(
