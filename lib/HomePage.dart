@@ -13,6 +13,14 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    List<Widget> telas = [
+      Text("Início"),
+      Text("Shorts"),
+      Text("Inscrições"),
+      Text("Você"),
+    ];
+
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(
@@ -42,7 +50,9 @@ class _HomePageState extends State<HomePage> {
               icon: Icon(Icons.account_circle,))
         ],
       ),
-      body: Container(),
+
+      body: telas[_indiceAtual],
+
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _indiceAtual,
         onTap: (indice){
